@@ -1,13 +1,16 @@
-#include <stdio.h>
+ if len(num_str) < 3:
+        return "The number must have at least three digits."
 
-int main() {
-    char str[] = "Hello, world!";
-    int length = 0;
+    # Extract the first, second, and third digits
+    first_digit = num_str[0]
+    second_digit = num_str[1]
+    third_digit = num_str[2]
 
-    
-    while (str[length] != '\0') {
-        length++;
-    }
+    return first_digit, second_digit, third_digit
 
-    printf("Length of the string: %d\n", length);
-    return 0;
+# Input from the user
+input_number = input("Enter a number: ")
+
+# Find and print the digits
+result = find_digits(input_number)
+print(result)
