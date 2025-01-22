@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    
+    float takeoff_speed_kmh, distance_meters, takeoff_speed_ms;
+    float acceleration, time_seconds;
+
+   
+    printf("Enter the jet's takeoff speed (in km/h): ");
+    scanf("%f", &takeoff_speed_kmh);
+
+    printf("Enter the distance over which the jet is accelerated (in meters): ");
+    scanf("%f", &distance_meters);
+
+    
+    takeoff_speed_ms = takeoff_speed_kmh * 1000 / 3600;
+
+   
+    acceleration = (takeoff_speed_ms * takeoff_speed_ms) / (2 * distance_meters);
+
+   
+    time_seconds = takeoff_speed_ms / acceleration;
+
+   
+    printf("\nCalculated Results:\n");
+    printf("Acceleration: %.2f m/s²\n", acceleration);
+    printf("Time to reach takeoff speed: %.2f seconds\n", time_seconds);
+
+    return 0;
+}
